@@ -1,0 +1,449 @@
+body {
+  font-size: 14px;
+  font-weight: normal;
+}
+body, button, html, input, select, textarea {
+  color: #172b4d;
+}
+h3, h4, h5, h6 {
+  font-size: 16px;
+  line-height: 20px;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.kanban-board-page {
+  background: #0079bf;
+  height: 100vh;
+}
+.kanban-header {
+  background: #0067a3;
+  padding: 4px;
+}
+.kanban-header.navbar-light .navbar-nav .nav-link {
+  font-weight: bold;
+  display: inline-block;
+  text-transform: uppercase;
+  color: #fff;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 12px;
+}
+.kanban-header.navbar-light .navbar-brand {
+  padding: 0;
+  font-size: initial;
+}
+.kanban-header.navbar-light .navbar-brand img {
+  width: 80px;
+  opacity: 0.5;
+}
+.btn {
+  border-radius: 3px;
+  background: linear-gradient(to bottom, #61BD4F 0%, #5AAC44 100%);
+  padding: 0px 12px;
+  margin: 0 4px 0 0;
+  min-height: 32px;
+  line-height: 32px;
+  font-weight: bold;
+  border: none;
+  font-size: 14px;
+}
+.btn-secondary {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.2));
+}
+.btn:focus,
+.btn:hover,
+.btn:active:focus {
+  box-shadow: none !important;
+  outline: none !important;
+}
+.kanban-header .btn-secondary {
+  margin-right: 0;
+}
+.sign-up-free {
+  background: #faf3c0;
+  padding: 6px;
+  text-align: center;
+}
+.sign-up-free h4 {
+  font-size: 14px;
+  color: #172b4d;
+  font-weight: 700;
+  margin: 0;
+}
+.sign-up-free .btn {
+  background: #0079bf;
+  font-weight: normal;
+  margin-left: 8px;
+}
+.board-header {
+  padding: 8px 0px;
+}
+.board-header .title-ul {
+  list-style: none;
+  padding: 0;
+  display: table-row;
+  margin: 0;
+}
+.board-header .title-ul li {
+  display: table-cell;
+  vertical-align: middle;
+  color: #fff;
+  padding: 0px 4px;
+}
+.board-header .title-ul li.divider {
+  opacity: 0.5;
+}
+.board-header .header-title {
+  font-size: 18px;
+  color: #fff;
+  font-weight: 700;
+  padding: 0px 12px 0px 0px;
+  margin: 0px;
+}
+.board-header .ic-dropdown.btn {
+  background: #ffffff3d;
+  font-weight: normal;
+}
+.board-header .ic-dropdown.btn svg {
+  margin-right: 5px;
+}
+.board-header .ic-dropdown .dropdown-toggle::after {
+  display: none;
+}
+.board-header .ic-dropdown.ic-globe .dropdown-toggle::before {
+  content: "\f57e";
+}
+.board-header .show-menu-btn {
+  background: #ffffff3d;
+  font-weight: normal;
+}
+.board-header .show-menu-btn.btn svg {
+  margin-right: 5px;
+}
+
+.board-header .sidebar-box {
+  position: relative;
+}
+.show-menu-sidebar {
+  background: #f4f5f7;
+  box-shadow: 0 12px 24px -6px #091e4240, 0 0 0 1px #091e4214;
+  position: fixed;
+  width: 350px;
+  right: -350px;
+  top: 84px;
+  height: 100%;
+  visibility: hidden;
+  transform: translateX(100%);
+  z-index: 99;
+  transition: all 0.5s ease 0s;
+}
+.show-menu-sidebar.active {
+  visibility: visible;
+  transform: none;
+  display: inline-block;
+  right: 0;
+}
+.show-menu-sidebar .sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #091e4221;
+  padding: 12px 10px;
+}
+.show-menu-sidebar .sidebar-header .side-title {
+  margin: 0px auto;
+}
+.show-menu-sidebar .sidebar-header .close {
+  color: #42526e;
+}
+.show-menu-sidebar .sidebar-body {
+  text-align: left;
+  padding: 15px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
+  height: 100%;
+}
+.show-menu-sidebar .board-menu-nav li a {
+  border-radius: 3px;
+  display: block;
+  font-weight: 600;
+  padding: 6px;
+  line-height: 20px;
+  color: #42526e;
+  text-decoration: none;
+}
+.show-menu-sidebar .board-menu-nav li a .icon-nav {
+  color: #42526e;
+  margin-right: 12px;
+}
+.show-menu-sidebar .board-menu-nav li a:hover {
+  background: #091e4214;
+}
+.show-menu-sidebar .activity-tab h4 {
+  font-weight: 700;
+  color: #172b4d;
+  line-height: 20px;
+  margin-bottom: 0;
+  font-size: 14px;
+  padding: 6px;
+}
+.show-menu-sidebar .activity-tab h4 .icon {
+  margin-right: 12px;
+}
+.show-menu-sidebar .activity-list {
+  margin-top: 10px;
+}
+.show-menu-sidebar .activity-list li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+.show-menu-sidebar .activity-list li .initial-circle a {
+  background-color: #dfe1e6;
+  border-radius: 50px;
+  color: #172b4d;
+  margin-right: 10px;
+  width: 32px;
+  height: 32px;
+  display: block;
+  line-height: 32px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+}
+.show-menu-sidebar .activity-list li .activity-text {
+  padding: 0;
+  font-weight: normal;
+}
+.show-menu-sidebar .activity-list li .activity-text a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #172b4d;
+}
+.show-menu-sidebar .activity-list li .activity-time {
+  font-size: 12px;
+  color: #5e6c84;
+}
+/* Kanban board page ends */
+
+/* Custom popover starts */
+.kanban-popover-1 {
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 0 8px 16px -4px #091e4240, 0 0 0 1px #091e4214;
+  border: none;
+  max-width: 370px;
+  min-width: 300px;
+}
+.kanban-popover-1 .popover-arrow {
+  display: none;
+}
+.kanban-popover-1 .popover-header {
+  text-align: center;
+  border-bottom: 1px solid #091e4221;
+  color: #5e6c84;
+  margin: 0 12px;
+  background: #fff;
+  font-size: 14px;
+  font-weight: normal;
+  position: relative;
+  padding: 12px 0px;
+}
+.kanban-popover-1 .popover-header a {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  color: #6b778c;
+  padding: 10px 0px 10px 8px;
+}
+.kanban-popover-1 .pop-over-list li {
+  color: #a5adba;
+  font-size: 14px;
+  pointer-events: none;
+  padding: 6px 0px;
+}
+.kanban-popover-1 .pop-over-list li:last-child {
+  padding-bottom: 0;
+}
+.kanban-popover-1 .pop-over-list li svg {
+  margin-right: 4px;
+}
+.kanban-popover-1 .pop-over-list li h5 {
+  font-size: 12px;
+  font-weight: normal;
+  margin-top: 4px 0px 0px;
+  line-height: 16px;
+}
+.board-header .ic-dropdown.btn.btn-user {
+  position: relative;
+  font-size: 12px;
+  height: 30px;
+  line-height: 30px;
+  width: 30px;
+  font-weight: 700;
+  color: #172b4d;
+  background: #dfe1e6;
+  border-radius: 50px;
+  padding: 0;
+  min-height: auto;
+}
+.board-header .ic-dropdown.btn.btn-user:after {
+  background-image: url('chevron-top.png');
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  content: '';
+  width: 11px;
+  height: 11px;
+  background-size: 100%;
+}
+
+.user-popover .popover-body {
+  padding: 0;
+}
+.user-popover .pop-over-list li {
+  padding: 6px 12px;
+}
+.user-popover .pop-over-list li.pointer-yes {
+  pointer-events: auto;
+  padding: 0;
+}
+.user-popover .popover-header {
+  display: flex;
+  align-items: center;
+  border: none;
+  padding-bottom: 0;
+}
+.user-popover .popover-header .user-initial {
+  width: 50px;
+  height: 50px;
+  font-weight: 700;
+  line-height: 50px;
+  border-radius: 50px;
+  text-align: center;
+  background: #dfe1e6;
+  color: #172b4d;
+  text-transform: uppercase;
+}
+.user-popover .popover-header .user-text {
+  margin-left: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: left;
+}
+.user-popover .popover-header .user-text span {
+  color: #5e6c84;
+  font-size: 12px;
+  display: block;
+}
+.user-popover .user-link {
+  color: #172b4d;
+  font-weight: 400;
+  padding: 6px 12px;
+  text-decoration: none;
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+}
+.user-popover .user-link:hover {
+  color: #091e42;
+  background-color: #091e420a;
+}
+/* Custom popover ends */
+
+/* Kanban cards starts */
+.kanban-board-page .react-trello-board {
+  height: auto;
+  background-color: #0079bf;
+}
+.kanban-board-page .react-trello-board .react-trello-lane {
+  background: #ebecf0;
+}
+.kanban-board-page .kanban-card-inner {
+  background: #fff;
+  padding: 6px 8px 2px;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 #091e4240;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+.kanban-board-page .kanban-card-inner .card-title {
+  color: #172b4d;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 4px 0px;
+}
+.kanban-board-page .kanban-card-inner .card-label {
+  height: 16px;
+  line-height: 16px;
+  display: inline-block;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  min-width: 60px;
+  padding: 0px 8px;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+.kanban-board-page .kanban-card-inner .cp-label {
+  background: #0079bf;
+}
+.kanban-board-page .kanban-card-inner .fault-label {
+  background: #eb5a46;
+  text-transform: capitalize;
+}
+.add-card {
+  background: #e4e4e4;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin: 10px 0px 0px;
+}
+ .btn-danger {
+  background: #a5a5a5;
+}
+.add-card .form-control {
+  padding: 4px 10px;
+}
+.add-card .form-control:focus {
+  box-shadow: none;
+  outline: none;
+}
+/* Kanban cards ends */
+
+/* Responsive starts */
+@media screen and (max-width: 767px) {
+  .navbar-light .navbar-toggler, .logo-box {
+      display: none;
+  }
+  .kanban-header .logo-col {
+      text-align: left !important;
+      padding-left: 10px;
+  }
+  .board-header .sidebar-box {
+      margin: 10px 0px 0px;
+  }
+  .board-header .title-ul li {
+    display: inline-block;
+    margin: 5px 0px;
+  }
+  .kanban-popover-1 {
+    max-width: 320px;
+  }
+  .board-header .title-ul li.divider {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 432px) {
+  .show-menu-sidebar {
+      top: 104px;
+  }
+}
+/* Responsive ends */
